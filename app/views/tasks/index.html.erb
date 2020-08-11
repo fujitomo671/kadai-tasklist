@@ -1,3 +1,9 @@
+<% if logged_in? %>
+  <p>ログイン完了ユーザ: <%= current_user.name %></p>
+<% end %>
+
+<%= link_to 'Logout', logout_path, method: :delete %>
+
 <h1>タスク一覧</h1>
 
 <ul>
@@ -7,3 +13,10 @@
 </ul>
 
 <%= link_to '新規タスクの追加', new_task_path %>
+
+<div class="center jumbotron">
+  <div class="text-center">
+    <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+    <%= link_to 'Login', login_path, class: 'btn btn-lg btn-primary' %>
+  </div>
+</div>
