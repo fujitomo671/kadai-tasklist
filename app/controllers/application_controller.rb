@@ -1,10 +1,7 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
   
-  before_action :restrict_user
-  
   private 
-
   # メソッド名を変える
   def restrict_user
     redirect_to sessions_new_path unless logged_in?

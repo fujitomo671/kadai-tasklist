@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  skip_before_action :restrict_user
   
   def index
     @users = User.order(id: :desc).page(params[:page]).per(25)

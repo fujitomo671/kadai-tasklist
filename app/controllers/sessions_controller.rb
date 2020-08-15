@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_action :restrict_user
-  
+
   def new; end
 
   def create
